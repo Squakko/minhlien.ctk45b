@@ -17,7 +17,11 @@ p {
 }
 
 a:visited {
-    color: rgb(38, 121, 255);
+    color: rgb(121, 172, 255);
+}
+
+a {
+    color: rgb(89, 208, 255);    
 }
 
 img {

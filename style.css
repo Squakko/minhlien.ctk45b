@@ -1,5 +1,5 @@
 :root {
-    --clr: #222327;
+    --cls: #222327;
     --cls: #121212;
     --wid-whole: 1200px;
 }
@@ -20,7 +20,7 @@ html {
     height: 100vh;
     top: 0;
     left: 0;
-    background: #171C1D url(/images/loader.gif) center/300px no-repeat;
+    background: #171C1D url(resource/loader.gif) center/300px no-repeat;
     z-index: 1000000;
     transition: opacity 0.69s, visibility 0.69s;
 }
@@ -36,7 +36,6 @@ html {
     height: 100vh;
     top: 0;
     left: 0;
-    background: red url(/images/loader.gif) center/300px no-repeat;
     z-index: 1000000;
 }
 
@@ -52,7 +51,7 @@ html {
 body {
     box-shadow: 0 5px 20px 0px rgb(0 0 0 / 20%), 0 40px 24px -8px rgb(0, 75, 196);    
     display: flex;
-    background-color: var(--clr);
+    background-color: var(--cls);
     width: 100vw;
     max-width: var(--wid-whole);
     justify-content: center;
@@ -116,7 +115,7 @@ body {
     font-size: 1.5em;
     text-align: center;
     transition: 0.5s;
-    color: var(--clr);
+    color: var(--cls);
 }
 
 .navigation ul li.active a .icon {
@@ -125,7 +124,7 @@ body {
 
 .navigation ul li a .text {
     position: absolute;
-    color: var(--clr);
+    color: var(--cls);
     font-weight: 400;
     font-size: 0.75em;
     letter-spacing: 0.05em;
@@ -134,7 +133,7 @@ body {
 
 .navigation ul li a .text {
     position: absolute;
-    color: var(--clr);
+    color: var(--cls);
     font-weight: 400;
     font-size: 0.75em;
     letter-spacing: 0.05em;
@@ -155,7 +154,7 @@ body {
     height: 70px;
     background: #f44336;
     border-radius: 50%;
-    border: 6px solid var(--clr);
+    border: 6px solid var(--cls);
     transition: 0.5s;
 }
 
@@ -168,7 +167,7 @@ body {
     height: 20px;
     background: transparent;
     border-top-right-radius: 20px;
-    box-shadow: 1px -10px 0 0 var(--clr);
+    box-shadow: 1px -10px 0 0 var(--cls);
 }
 
 .indicator::after {
@@ -180,7 +179,7 @@ body {
     height: 20px;
     background: transparent;
     border-top-left-radius: 20px;
-    box-shadow: -1px -10px 0 0 var(--clr);
+    box-shadow: -1px -10px 0 0 var(--cls);
 }
 
 .navigation ul li:nth-child(1).active~.indicator {
