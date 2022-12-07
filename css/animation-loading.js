@@ -1,3 +1,3 @@
 $(document).ready(function () {
-    setTimeout(() => { document.querySelector(".loader").classList.add("loader--hidden"); }, 0);
+    setTimeout(() => { document.querySelector(".loader").classList.add("loader--hidden"); }, 850);
 });
