@@ -1,0 +1,25 @@
+html {
+    color: white;
+}
+
+body {
+    width: 99vw;
+    max-width: 1200px;
+}
+
+.list li {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+p {
+    margin-top: 6px;
+}
+
+a:visited {
+    color: rgb(38, 121, 255);
+}
+
+img {
+    width: 99%;
+}

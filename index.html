@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="lib/jquery-3.6.1.js"></script>
+    <script type="module" src="css/animation-loading.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Document</title>
+</head>
+
+<body onload="LaunchPage()">
+    <div class="loader"></div>
+
+    <div class="panel">
+        <iframe loading=lazy class="X-panel" src="1-Home.html" frameborder="0" style="display: block;"></iframe>
+        <iframe loading=lazy class="X-panel" src="2-Profile.html" frameborder="0"></iframe>
+        <iframe loading=lazy class="X-panel" src="3-Message.html" frameborder="0"></iframe>
+        <iframe loading=lazy class="X-panel" src="4-Photos.html" frameborder="0"></iframe>
+        <iframe loading=lazy class="X-panel" src="5-Settings.html" frameborder="0"></iframe>
+    </div>
+    <div class="navigation">
+        <ul>
+            <li class="list active">
+                <a onclick="SwitchPage(0)">
+                    <span class="icon">
+                        <ion-icon name="alarm-outline"></ion-icon>
+                    </span>
+                    <span class="text">Pomodoro</span>
+                </a>
+            </li>
+            <li class="list">
+                <a onclick="SwitchPage(1)">
+                    <span class="icon">
+                        <ion-icon name="game-controller-outline"></ion-icon>
+                    </span>
+                    <span class="text">Entertainment</span>
+                </a>
+            </li>
+            <li class="list">
+                <a onclick="SwitchPage(2)">
+                    <span class="icon">
+                        <ion-icon name="book-outline"></ion-icon>
+                    </span>
+                    <span class="text">Learning</span>
+                </a>
+            </li>
+            <li class="list">
+                <a onclick="SwitchPage(3)">
+                    <span class="icon">
+                        <ion-icon name="headset-outline"></ion-icon>
+                    </span>
+                    <span class="text">Chilling</span>
+                </a>
+            </li>
+            <li class="list">
+                <a onclick="SwitchPage(4)">
+                    <span class="icon">
+                        <ion-icon name="build-outline"></ion-icon>
+                    </span>
+                    <span class="text">WIP</span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+
+    <script>
+        const list = document.querySelectorAll('.list');
+
+        function activeLink() {
+            list.forEach(item => {
+                item.classList.remove('active');
+                this.classList.add('active');
+            })
+        }
+
+        list.forEach(item => {
+            item.addEventListener('click', activeLink);
+        });
+    </script>
+
+    <script>
+        let x = ["#Home", "#Settings"];
+        function NewHref(n) {
+            location.href = n;
+        }
+    </script>
+
+    <script>
+        var xpanel = document.getElementsByClassName("X-panel");
+        function LaunchPage() {
+            xpanel[0].style.display = "block";
+        }
+
+        function SwitchPage(page) {
+            let i = 0;
+            for (i; i <= 4; i++) {
+                xpanel[i].style.display = "block";
+                if (page === i) { continue; }
+                xpanel[i].style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

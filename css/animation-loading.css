@@ -1,0 +1,25 @@
+.loader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: wheat;
+    background: #171C1D url(../resource/loader.gif) center/300px no-repeat;
+    z-index: 1000000;
+    transition: opacity 0.69s, visibility 0.69s;
+}
+
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+}
